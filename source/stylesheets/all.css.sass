@@ -1,3 +1,17 @@
+$medium_screen: 600px
+$large_screen:  800px
+
+// Use media queries like this:
+// @include media-query($large_screen) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($screen_size)
+  @media screen and (min-width: $screen_size)
+    @content
+
 @import normalize
 @import site
 @import postit
