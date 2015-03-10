@@ -72,3 +72,25 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+
+  # Optional Settings
+
+  # Remote name or git url, default: origin
+  # deploy.remote   = 'custom-remote'
+
+  # Default branch: gh-pages
+  # deploy.branch   = 'custom-branch'
+
+  # Commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.strategy = :submodule
+
+  # Commit message (can be empty),
+  #   default: Automated commit at `timestamp` by middleman-deploy `version`
+  # deploy.commit_message = 'custom-message'
+
+  # Automatically run middleman build during middleman deploy, default: false
+  deploy.build_before = true
+end
